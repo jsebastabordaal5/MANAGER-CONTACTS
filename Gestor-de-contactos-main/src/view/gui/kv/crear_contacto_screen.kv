@@ -1,0 +1,51 @@
+<CrearContactoScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+        spacing: 10
+
+        Label:
+            text: "Crear nuevo contacto"
+            font_size: '24sp'
+            size_hint_y: None
+            height: self.texture_size[1]
+
+
+        Label:
+            text: "Selecciona el Tipo"
+            size_hint_y: None
+            height: 40
+
+        Spinner:
+            id: tipo
+            text: "Selecciona tipo"
+            values: ["Profesional", "Personal"]
+            size_hint_y: None
+            height: 40
+
+        TextInput:
+            id: nombre
+            hint_text: "Nombre"
+
+        TextInput:
+            id: telefono
+            hint_text: "Teléfono"
+
+
+        BoxLayout:
+            size_hint_y: None
+            height: '50dp'
+            spacing: 10
+
+            Button:
+                text: "Guardar"
+                on_release: root.crear_contacto()
+
+            Button:
+                text: "Cancelar"
+                on_release: app.root.current = 'usuario_screen'
+
+
+
+
+

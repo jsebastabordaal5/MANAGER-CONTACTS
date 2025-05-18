@@ -1,0 +1,30 @@
+<ExportarContactosScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        padding: 20
+        spacing: 15
+
+        Label:
+            text: "Exportar Contactos"
+            font_size: "24sp"
+            size_hint_y: None
+            height: self.texture_size[1]
+
+        TextInput:
+            id: nombre_archivo_input
+            hint_text: "Ingresa el nombre del archivo que deseas crear "
+            multiline: False
+            size_hint_y: None
+            height: "40dp"
+
+        Button:
+            text: "Exportar"
+            size_hint_y: None
+            height: "40dp"
+            on_release: root.exportar_contactos()
+
+        Button:
+            text: "Volver"
+            size_hint_y: None
+            height: "40dp"
+            on_press: root.volver()

@@ -1,0 +1,36 @@
+<ImportarContactosScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        padding: 20
+        spacing: 15
+
+        Label:
+            text: "Importar Contactos"
+            font_size: "24sp"
+            size_hint_y: None
+            height: self.texture_size[1]
+
+        TextInput:
+            id: ruta_input
+            hint_text: "Ingresa la ruta del archivo"
+            multiline: False
+            size_hint_y: None
+            height: "40dp"
+
+        Label:
+            text: root.mensaje_error
+            color: (1, 0, 0, 1)  # Rojo
+            size_hint_y: None
+            height: self.texture_size[1]
+
+        Button:
+            text: "Importar"
+            size_hint_y: None
+            height: "40dp"
+            on_press: root.importar_contactos()
+
+        Button:
+            text: "Volver"
+            size_hint_y: None
+            height: "40dp"
+            on_press: root.volver()

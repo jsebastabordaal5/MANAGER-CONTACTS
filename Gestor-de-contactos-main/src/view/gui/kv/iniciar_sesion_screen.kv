@@ -1,0 +1,85 @@
+<IniciarSesionScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        spacing: 20
+        padding: 50
+
+        Label:
+            text: "Pantalla para iniciar sesión"
+            font_size: '24sp'
+            halign: "center"
+            valign: "middle"
+            text_size: self.width, None
+            size_hint_y: None
+            height: 40
+
+            
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint_y: None
+            height: 40
+            spacing: 10
+
+            Label:
+                text: "Usuario:"
+                size_hint_x: 0.3
+                halign: "right"
+                valign: "middle"
+                text_size: self.width, None
+                size_hint_y: None
+                height: 40
+                
+
+            TextInput:
+                id: usuario_input
+                multiline: False
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint_y: None
+            height: 40
+            spacing: 10
+
+            Label:
+                text: "Contraseña:"
+                size_hint_x: 0.3
+                halign: "right"
+                valign: "middle"
+                text_size: self.width, None
+                size_hint_y: None
+                height: 40
+                
+
+            TextInput:
+                id: contrasena_input
+                multiline: False
+                password: True
+
+        Label:
+
+            id: error_label
+            text: ""
+            color: 1, 0, 0, 1  # rojo
+            font_size: '16sp'
+            halign: "center"
+            valign: "middle"
+            text_size: self.width, None
+            size_hint_y: None
+            height: 30
+           
+
+        Button:
+            text: "Iniciar sesión"
+            size_hint: None, None
+            size: 200, 50
+            pos_hint: {"center_x": 0.5}
+            on_press : root.iniciar_sesion()
+
+        Button:
+            text: "Volver"
+            size_hint: None, None
+            size: 200, 50
+            pos_hint: {"center_x": 0.5}
+            on_press: root.volver()
+        
+

@@ -1,0 +1,45 @@
+<UsuarioScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        spacing: 20
+        padding: 50
+
+        Label:
+            id: bienvenida
+            text: "Bienvenido!"
+            font_size: "24sp"
+            halign: "center"
+            valign: "middle"
+            text_size: self.size
+
+        Button:
+            text: "Ver contactos"
+            size_hint_y: None
+            height: 40
+            on_press: root.ver_contactos()
+
+        Button:
+            text: "Crear contacto"
+            size_hint_y: None
+            height: 40
+            on_press: root.crear_contacto()
+
+        Button:
+            text: "Editar contacto"
+            size_hint_y: None
+            height: 40
+            on_press: root.mostrar_lista_edicion()
+
+        Button:
+            text: "Importar contactos"
+            size_hint_y: None
+            height: 40
+            on_press: root.importar_contactos()
+
+        Button:
+            text: "Exportar contactos"
+            size_hint_y: None
+            height: 40
+            on_press: root.exportar_contactos()
+
+

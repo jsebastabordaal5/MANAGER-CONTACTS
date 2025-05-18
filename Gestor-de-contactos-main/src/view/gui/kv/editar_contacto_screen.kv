@@ -1,0 +1,41 @@
+<EditarContactoScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+        spacing: 10
+
+        Label:
+            text: "Editar Contacto"
+            font_size: '24sp'
+            size_hint_y: None
+            height: self.texture_size[1] + 20
+
+        TextInput:
+            id: nombre_input
+            hint_text: "Nombre"
+            multiline: False
+
+        TextInput:
+            id: telefono_input
+            hint_text: "Teléfono"
+            multiline: False
+
+
+        Spinner:
+            id: tipo_spinner
+            text: "personal"
+            values: ["personal", "profesional"]
+            size_hint_y: None
+            height: 44
+
+        Button:
+            text: "Guardar cambios"
+            size_hint_y: None
+            height: 50
+            on_release: root.guardar_contacto()
+
+        Button:
+            text: "Cancelar"
+            size_hint_y: None
+            height: 50
+            on_release: root.manager.current = 'usuario_screen'

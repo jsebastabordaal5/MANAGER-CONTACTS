@@ -1,0 +1,26 @@
+<MainScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        spacing: 20
+        padding: 50
+
+        Label:
+            text: "Bienvenido a ContactManager"
+            font_size: '24sp'
+            halign: "center"
+            valign: "middle"
+            text_size: self.size
+
+        Button:
+            text: "Iniciar sesión"
+            size_hint: None, None
+            size: 200, 50
+            pos_hint: {"center_x": 0.5}
+            on_press : root.iniciar_sesion()
+
+        Button:
+            text: "Registrarse"
+            size_hint: None, None
+            size: 200, 50
+            pos_hint: {"center_x": 0.5}
+            on_press : root.registrar_usuario()
