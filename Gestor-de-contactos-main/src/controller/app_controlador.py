@@ -5,7 +5,7 @@ from src.model.contacto import Contacto
 
 class AppControlador:
     def __init__(self):
-        self.sistema = Sistema(usar_db=True)
+        self.sistema = Sistema(usar_db=False)
         self.usuario_actual: Usuario = None
 
     def iniciar_sesion(self, nombre: str, contraseña: str):
