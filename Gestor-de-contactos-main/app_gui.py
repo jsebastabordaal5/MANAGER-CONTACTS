@@ -4,5 +4,5 @@ from src.view.gui.gui import ContactosApp
 from src.controller.app_controlador import AppControlador
 
 if __name__ == "__main__":
-    app_controlador: AppControlador = AppControlador()
+    app_controlador: AppControlador = AppControlador(usar_db = True)
     ContactosApp(app_controlador).run()

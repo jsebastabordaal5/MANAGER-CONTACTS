@@ -6,9 +6,9 @@ from src.model.contacto import Contacto
 class AppControlador:
     """Controlador principal para gestionar usuarios y contactos en la aplicación."""
 
-    def __init__(self):
+    def __init__(self, usar_db = False):
         """Inicializa el sistema y el usuario actual."""
-        self.sistema = Sistema(usar_db=True)
+        self.sistema = Sistema(usar_db = usar_db)
         self.usuario_actual: Usuario = None
 
     def iniciar_sesion(self, nombre: str, contraseña: str):

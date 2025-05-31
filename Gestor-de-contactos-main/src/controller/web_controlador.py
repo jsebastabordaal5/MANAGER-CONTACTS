@@ -47,7 +47,7 @@ class WebControlador:
     def __init__(self):
         """Inicializa el router y el sistema."""
         self.router = APIRouter(prefix="/api/v1")
-        self.sistema : Sistema = Sistema(usar_db=True)
+        self.sistema : Sistema = Sistema(usar_db = usar_db)
         self.__registrar_rutas()
 
     def __registrar_rutas(self):

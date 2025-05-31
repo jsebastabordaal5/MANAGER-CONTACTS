@@ -12,7 +12,7 @@ STATIC_DIR = os.path.join(BASE_DIR, "src", "view", "web")
 if __name__ == "__main__":
 
     app = FastAPI()
-    controlador = WebControlador()
+    controlador = WebControlador(usar_db = True)
 
     app.add_middleware(
         CORSMiddleware,
