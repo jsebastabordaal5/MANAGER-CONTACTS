@@ -4,28 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ver contactos</title>
+    <script src="ver_contactos_screen.js" defer></script>
 </head>
 <body>
 
-    <h1 style ="text-align: center;">Ver contactos</h1>
+    <h1 style="text-align: center;">Ver contactos</h1>
 
-    <div style ="text-align: center;">
-
+    <div style="text-align: center;">
         <label for="tipo"><b>Filtrar por tipo: </b></label><br>
-        <select>
-            <option>Profesional</option>
-            <option>Personal</option>
+        <select id="tipo">
+            <option value="">Todos</option>
+            <option value="Profesional">Profesional</option>
+            <option value="Personal">Personal</option>
         </select><br><br>
 
-        <label for="contacto"><b>Filtrar por nombre:</b></label><br>
-        <input type="text" id="contacto" name="contacto" required><br><br>
+        <label for="nombre"><b>Filtrar por nombre:</b></label><br>
+        <input type="text" id="nombre"><br><br>
 
-        <label for="contacto"><b>Filtrar por teléfono:</b></label><br>
-        <input type="text" id="contacto" name="contacto" required><br><br>
+        <label for="telefono"><b>Filtrar por teléfono:</b></label><br>
+        <input type="text" id="telefono"><br><br>
 
-        <button>Filtrar</button><br><br>
+        <button onclick="filtrarContactos()">Filtrar</button><br><br>
         <button onclick="window.location.href='menu_usuario_screen.html'">Volver</button><br><br>
 
+        <table border="1" style="margin: 0 auto;">
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Nombre</th>
+                    <th>Teléfono</th>
+                </tr>
+            </thead>
+            <tbody id="tablaContactos">
+                <!-- Aquí van los contactos -->
+            </tbody>
+        </table>
     </div>
     
 </body>

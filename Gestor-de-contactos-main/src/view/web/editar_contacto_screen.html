@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Editar contacto</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Editar contacto</h1>
+
+    <div style="text-align: center;">
+        <label for="contactoSelect"><b>Selecciona el contacto a editar:</b></label><br>
+        <select id="contactoSelect">
+            <option value="" disabled selected>-- Elige un contacto --</option>
+        </select><br><br>
+
+        <form id="editarContactoForm" style="display:none;">
+            <input type="hidden" id="nombreOriginal" />
+
+            <label for="tipo"><b>Tipo:</b></label><br>
+            <select id="tipo" required>
+                <option value="Profesional">Profesional</option>
+                <option value="Personal">Personal</option>
+            </select><br><br>
+
+            <label for="nombre"><b>Nombre:</b></label><br>
+            <input type="text" id="nombre" required /><br><br>
+
+            <label for="telefono"><b>Teléfono:</b></label><br>
+            <input type="text" id="telefono" required /><br><br>
+
+            <button type="submit">Guardar cambios</button><br><br>
+        </form>
+
+        <button onclick="window.location.href='menu_usuario_screen.html'">Volver</button>
+        <p id="mensaje" style="color: red;"></p>
+    </div>
+
+    <script src="editar_contacto_screen.js"></script>
+</body>
+</html>
