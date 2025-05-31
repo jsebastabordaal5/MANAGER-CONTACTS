@@ -1,3 +1,11 @@
+/**
+ * Permite registrar un nuevo usuario desde un formulario de nombre y contraseña.
+ * Se valida que ambos campos estén completos.
+ * La información se envía por POST a la API y se muestra un mensaje de éxito o error.
+ * Si el registro es exitoso, redirige a la página principal o login.
+ */
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const btnRegistrar = document.getElementById('btnRegistrar');
 

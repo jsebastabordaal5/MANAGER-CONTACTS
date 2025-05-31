@@ -1,3 +1,12 @@
+/**
+ * Permite al usuario seleccionar un contacto desde un menú desplegable,
+ * visualizar su información y editar sus datos (nombre, tipo, teléfono).
+ * La edición se realiza mediante una solicitud POST a la API.
+ * Si hay errores de validación, se muestran mensajes en pantalla.
+ * Al finalizar, se recarga la lista de contactos y se limpia el formulario.
+ */
+
+
 const contactoSelect = document.getElementById('contactoSelect');
 const form = document.getElementById('editarContactoForm');
 const tipoInput = document.getElementById('tipo');

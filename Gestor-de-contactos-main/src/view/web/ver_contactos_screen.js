@@ -1,3 +1,11 @@
+/**
+ * Carga y muestra una tabla de contactos del usuario autenticado.
+ * Permite filtrar por tipo, nombre o teléfono.
+ * Los filtros son aplicados en tiempo real sobre los datos recibidos desde la API.
+ * Si no hay sesión iniciada, redirige a la pantalla de login.
+ */
+
+
 function filtrarContactos() {
     const tipoFiltro = document.getElementById("tipo").value.toLowerCase();
     const nombreFiltro = document.getElementById("nombre").value.toLowerCase();

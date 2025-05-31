@@ -1,3 +1,11 @@
+/**
+ * Importa contactos desde un archivo local con formato VCF.
+ * El usuario proporciona la ruta del archivo y debe estar autenticado.
+ * Se realiza una solicitud POST a la API que procesa la importación.
+ * En caso de éxito o error, se muestra un mensaje correspondiente.
+ */
+
+
 document.getElementById('btnImportar').addEventListener('click', () => {
     const rutaArchivo = document.getElementById('rutaArchivo').value.trim();
     const nombreUsuario = localStorage.getItem('usuarioActual');

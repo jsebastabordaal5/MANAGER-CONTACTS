@@ -1,3 +1,12 @@
+/**
+ * Script que permite iniciar sesión en el sistema.
+ * Captura nombre de usuario y contraseña desde el formulario.
+ * Envía una solicitud POST a la API para autenticación.
+ * Si es exitoso, guarda el nombre de usuario en localStorage y redirige al menú principal.
+ * Si falla, muestra un mensaje de error.
+ */
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const btnLogin = document.getElementById('btnLogin');
     btnLogin.addEventListener('click', manejarLogin);

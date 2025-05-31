@@ -1,3 +1,11 @@
+/**
+ * Interfaz de menú principal para el usuario una vez ha iniciado sesión.
+ * Ofrece navegación a diferentes funcionalidades: agregar, editar, ver, importar, exportar contactos.
+ * También permite cerrar sesión limpiando el localStorage y redirigiendo a login.
+ */
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('btnAgregar').addEventListener('click', () => {
         window.location.href = "agregar_contacto_screen.html";

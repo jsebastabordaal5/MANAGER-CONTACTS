@@ -1,3 +1,11 @@
+/**
+ * Exporta todos los contactos de un usuario autenticado a un archivo .vcf.
+ * El usuario debe ingresar el nombre del archivo.
+ * Se hace una solicitud POST a la API para realizar la exportación.
+ * Si no hay sesión iniciada o falta el nombre del archivo, se notifica al usuario.
+ */
+
+
 document.querySelector("button").addEventListener("click", () => {
     const nombreArchivo = document.getElementById("usuario").value.trim();
     const usuario = localStorage.getItem("usuarioActual");

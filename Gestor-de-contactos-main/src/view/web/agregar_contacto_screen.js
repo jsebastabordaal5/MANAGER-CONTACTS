@@ -1,3 +1,12 @@
+/**
+ * Permite registrar un nuevo contacto en el sistema.
+ * Captura los datos del formulario (tipo, nombre, teléfono) y los envía como FormData.
+ * Hace una solicitud POST a la API para guardar el contacto.
+ * Si es exitoso, muestra un mensaje y redirige al menú.
+ * Si hay errores, los muestra al usuario.
+ */
+
+
 function registrarContacto() {
     const tipo = document.getElementById("tipo").value;
     const nombre = document.getElementById("nombre").value.trim();
